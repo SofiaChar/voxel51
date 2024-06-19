@@ -14,12 +14,14 @@
     name: voxel51
     description: display voxel51 dashboard
     server-command: |
+      pip install tornado && \
       mkdir -p /tmp/zoo && mkdir -p /tmp/db && mkdir -p /tmp/zoo_model && \
       export FIFTYONE_DATABASE_DIR=/tmp/db && \
       export FIFTYONE_DEFAULT_DATASET_DIR=/tmp/db && \
       export FIFTYONE_DATASET_ZOO_DIR=/tmp/zoo && \
       export FIFTYONE_MODEL_ZOO_DIR=/tmp/zoo_model && \
       export FIFTYONE_DEFAULT_APP_ADDRESS='0.0.0.0' && \
+      export FIFTYONE_APP_PROXY_URL=https://valohai.cloud$VH_DEFAULT_PREFIX/  && \
       python main.py --host 0.0.0.0
     port: 5151
 
