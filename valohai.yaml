@@ -22,6 +22,7 @@
       export FIFTYONE_MODEL_ZOO_DIR=/tmp/zoo_model && \
       export FIFTYONE_DEFAULT_APP_ADDRESS='0.0.0.0' && \
       export FIFTYONE_APP_PROXY_URL=https://valohai.cloud$VH_DEFAULT_PREFIX/  && \
+      export URL_PREFIX=$VH_DEFAULT_PREFIX  && \
       python main.py --host 0.0.0.0
     port: 5151
 
