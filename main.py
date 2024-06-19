@@ -3,6 +3,9 @@ import tornado.ioloop
 import tornado.web
 import fiftyone as fo
 import fiftyone.zoo as foz
+from fiftyone import ViewField as F
+
+import os
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
